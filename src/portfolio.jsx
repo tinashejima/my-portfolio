@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./portfolio.css";
+import profileImg from "./assets/my-image.jpg";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -195,13 +196,15 @@ function About() {
     <section id="about" className="section">
       <h2 className="section-title">About Me</h2>
       <FadeBox className="about-content">
-        <div className="about-image">👨‍💻</div>
+        <div className="about-image-container">
+          <img src={profileImg} alt="Tinashe Jima" className="about-image" />
+        </div>
         <div>
           <p className="about-text">
-            Results-driven Junior Data Analyst and Software Developer with hands-on experience designing, automating,
-            and deploying high-availability enterprise architecture, workflow automation, and data platforms. 
-            Proven foundational knowledge in software development, micro-services (CQRS/Event Sourcing), 
-            REST/SOAP APIs, CI/CD pipeline automation, and enterprise data warehousing.
+            Results-driven Data Professional and Software Developer with hands-on experience
+            designing, automating, and deploying high-availability enterprise architecture,
+            workflow automation, and data platforms. Proven foundational knowledge in software
+            development, REST/SOAP APIs, CI/CD pipeline automation, and enterprise data warehousing.
           </p>
           <div className="skills" id="skills">
             {SKILLS.map((skill) => (
