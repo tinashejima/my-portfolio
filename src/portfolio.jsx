@@ -287,7 +287,7 @@ function Footer() {
       <h2 style={{ fontSize: "1.5rem", color: "#f8fafc", marginBottom: "1.5rem" }}>Get In Touch</h2>
       <div className="social-links">
         <a
-          href="www.linkedin.com/in/tinashe-jima-62115125a"
+          href="https://www.linkedin.com/in/tinashe-jima-62115125a/"
           target="_blank"
           rel="noreferrer"
           className="social-link"
