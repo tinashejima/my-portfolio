@@ -97,11 +97,25 @@ const EXPERIENCE = [
 ];
 
 const STACK = [
-  ["🐍", "Python"], ["☕", "Java"], ["🐘", "PostgreSQL"], ["🐬", "MySQL"],
-  ["🐝", "Hive SQL"], ["🐳", "Docker"], ["🌐", "Nginx"],
-  ["☁️", "AWS"], ["🔥", "FHIR R4"], ["🔗", "OpenHIM"],
-  ["📊", "Power BI"], ["🌿", "Spring Boot"], ["🐙", "GitHub"], ["🐧", "Linux"],
-  ["🪟", "Windows"], ["🔬", "Pandas"], ["📓", "Jupyter"], ["🏗️", "Maven"],
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "Apache Spark", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" },
+  { name: "Hive SQL", icon: "https://hive.apache.org/images/hive_logo_medium.png" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Nginx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
+  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+  { name: "FHIR R4", icon: "https://hl7.org/fhir/assets/images/fhir-logo-www.png" },
+  { name: "OpenHIM", icon: "https://openhim.org/img/openhim-logo.png" },
+  { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
+  { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "Windows", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" },
+  { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+  { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+  { name: "Maven", icon: "https://maven.apache.org/images/maven-logo-black-on-white.png" },
 ];
 
 // ── Custom Hook ──────────────────────────────────────────────────────────────
@@ -273,10 +287,12 @@ function TechStackSection() {
     <section id="stack" className="section projects">
       <h2 className="section-title">Tech Stack</h2>
       <div className="stack-grid">
-        {STACK.map(([icon, name]) => (
-          <FadeBox key={name} className="stack-card">
-            <div className="stack-icon">{icon}</div>
-            <span className="stack-name">{name}</span>
+        {STACK.map((item) => (
+          <FadeBox key={item.name} className="stack-card">
+            <div className="stack-icon-wrapper">
+              <img src={item.icon} alt={item.name} className="stack-img" />
+            </div>
+            <span className="stack-name">{item.name}</span>
           </FadeBox>
         ))}
       </div>

@@ -477,3 +477,17 @@
     padding: 4rem 1rem;
   }
 }
+
+.stack-icon-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.stack-img {
+  max-width: 38px;
+  max-height: 38px;
+  object-fit: contain;
+}
